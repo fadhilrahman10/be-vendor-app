@@ -1,0 +1,54 @@
+### POST Register User
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "test@gmail.com",
+  "password": "test",
+  "name": "test"
+}
+###
+
+### POST Login User
+POST http://localhost:3001/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "test@gmail.com",
+  "password": "test"
+}
+###
+
+### GET User
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+X-API-TOKEN: 68c14d77-c453-45a8-89db-efa9d5494841
+###
+
+### LOGOUT User
+DELETE http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+X-API-TOKEN: 68c14d77-c453-45a8-89db-efa9d5494841
+###
+
+### POST Create Vendor
+POST http://localhost:3000/api/vendors
+Content-Type: application/json
+Accept: application/json
+X-API-TOKEN: d9b86e51-1054-4720-8db7-c1055b0ac6e6
+
+{
+  "name": "test 3",
+  "address": "test 3",
+  "unit": 1
+}
+###
+
+### GET Vendors
+GET http://localhost:3001/api/vendors?unit=1
+Accept: application/json
+X-API-TOKEN: b92950b0-2834-4e97-b8e2-60be67d04863
